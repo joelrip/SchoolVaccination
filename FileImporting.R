@@ -40,3 +40,8 @@ for(j in 1:nrow(ChildCareData)) {
     ChildCareData$lat[j] <- NA
   }
 }
+##Fix broken address
+ChildCareData[579,32] <- "1101 F STREET"
+TempGeo <- geocode(paste(ChildCareData$Address[579],ChildCareData$City.y[579],ChildCareData$State[579],ChildCareData$Zipcode[579]))
+ChildCareData$lon[579] <- TempGeo$lon
+ChildCareData$lat[579] <- TempGeo$lat 
