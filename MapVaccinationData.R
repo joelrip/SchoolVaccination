@@ -34,8 +34,17 @@ names(CCVaccination) <- c("Facility Number","County","Type","License Status","Na
                           "City","State","ZIP","Phone","Total Students","Up To Date","Conditional",
                           "Permanent Medical Exemptions","Personal Belief Exemptions","DTP","Polio",
                           "MMR","HIB","HepB","Varicella","Pct Personal Belief Exemptions")
-#Plot
+##Plot
 require(plotGoogleMaps)
-ic <- iconlabels(CCVaccination$Pct.Personal.Belief.Exemptions)
-plotGoogleMaps(CCVaccination, zcol="Pct Personal Belief Exemptions", mapTypeId="ROADMAP", colPalette=c("#91CF60","#F9F030","#FC5050"), at=c(0,0.03,0.1,1), layerName="Child Care Facilities 2012-13")
+#ic <- iconlabels(CCVaccination$Pct.Personal.Belief.Exemptions)
+plotGoogleMaps(CCVaccination, zcol="Pct Personal Belief Exemptions", mapTypeId="HYBRID", colPalette=c("#91CF60","#F9F030","#FC5050"), at=c(0,0.03,0.1,1), layerName="Child Care Facilities 2012-13")
 #bubbleGoogleMaps(ChildCareData_spdf, zcol="PBEPctCalc", mapTypeId="ROADMAP", colPalette=c("#91CF60","#F9F030","#FC5050"), layerName="Child Care Facilities")
+
+##Change map markers
+CCVaccination2 <- readLines('CCVaccination.htm')
+CCVaccination2 <- gsub("icon: new google.*F9F030.*", " icon: getCircleYellow(),", CCVaccination2)
+CCVaccination2 <- gsub("icon: new google.*91CF60.*", " icon: getCircleGreen(),", CCVaccination2)
+CCVaccination2 <- gsub("icon: new google.*FC5050.*", " icon: getCircleRed(),", CCVaccination2)
+fileCon <- file("CCVaccination2.htm")
+writeLines(CCVaccination2, fileCon)
+close(fileCon)
