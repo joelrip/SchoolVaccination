@@ -66,3 +66,5 @@ Note that plotGoogleMaps() defaults to using Google's pins as map icons.  To rep
 Manual editing was also peformed to remove a duplicate legend, as plotGoogleMaps() produces a legend for each dataset mapped, and the legends for child care facilities and Kindergartens were identical.
 
 The resulting HTML file was re-read into R using the final script in MapVaccinationData.R, and all references to the standard Google pins were replaced with references to the getCircle functions listed above.
+
+The final output file is SacVaccination.htm.  In order to properly display the legend, Legend9cf882f981.png must be downloaded as well.
