@@ -67,39 +67,6 @@ USGSOverlay.prototype.show = function() {if (this.div_) {  this.div_.style.visib
   opac=0.01*parseInt(document.getElementById(textname).value) 
     Raster.div_.style.opacity= opac } 
 
-function getCircleYellow() {
-  return {
-    path: google.maps.SymbolPath.CIRCLE,
-    fillColor: '#F9F030',
-    fillOpacity: .8,
-    scale: 5,
-    strokeColor: 'black',
-    strokeWeight: 1
-  };
-}
-
-function getCircleGreen() {
-  return {
-    path: google.maps.SymbolPath.CIRCLE,
-    fillColor: '#91CF60',
-    fillOpacity: .8,
-    scale: 5,
-    strokeColor: 'black',
-    strokeWeight: 1
-  };
-}
-
-function getCircleRed() {
-  return {
-    path: google.maps.SymbolPath.CIRCLE,
-    fillColor: '#FC5050',
-    fillOpacity: .8,
-    scale: 5,
-    strokeColor: 'black',
-    strokeWeight: 1
-  };
-}
-
  var marker 
  var map 
  var  markersCCVaccination =[] ; var  marker = new google.maps.Marker({ 
@@ -12226,8 +12193,8 @@ showO(markersCCVaccination,"CCVaccinationbox");  google.maps.event.addListener(m
                            
  <div id="cBoxes"> 
 <input type="checkbox" id="CCVaccinationbox" onClick='boxclick(this,markersCCVaccination,"CCVaccinationbox");' /> <b>Child Care Facilities 2012-13<b> <hr /> 
- <table> <tr>  <td> <input type="checkbox"  checked="checked" id="boxLegend21ee2b69a8c4" onClick='legendDisplay(this,"Legend21ee2b69a8c4");' /> LEGEND </td> </tr>  <tr> <td>Pct Personal Belief Exemptions</td> </tr>
-                                    <tr> <td> <div style="display:block;" id="Legend21ee2b69a8c4"> <img src="Legend21ee2b69a8c4.png" alt="Legend" height="70%"> </div>
+ <table> <tr>  <td> <input type="checkbox"  checked="checked" id="boxLegend9cf1f36bcf7" onClick='legendDisplay(this,"Legend9cf1f36bcf7");' /> LEGEND </td> </tr>  <tr> <td>Pct Personal Belief Exemptions</td> </tr>
+                                    <tr> <td> <div style="display:block;" id="Legend9cf1f36bcf7"> <img src="Legend9cf1f36bcf7.png" alt="Legend" height="70%"> </div>
                            </td> </tr> 
  </table> 
   <hr> 
