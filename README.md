@@ -28,7 +28,8 @@ The data were then mapped using the scripts in MapVaccinationData.R.  Files were
 
 Note that plotGoogleMaps() defaults to using Google's pins as map icons.  To replace these, the HTML file produced by plotGoogleMaps() was manually edited to add functions to produce more generic (and less obtrusive) circles.  Specifically, the following code was added to the HTML file:
 
->  function getCircleYellow() {  
+```
+  function getCircleYellow() {  
     return {  
       path: google.maps.SymbolPath.CIRCLE, 
       fillColor: '#F9F030',  
@@ -39,7 +40,7 @@ Note that plotGoogleMaps() defaults to using Google's pins as map icons.  To rep
     };  
   }  
   
->  function getCircleGreen() {  
+  function getCircleGreen() {  
     return {  
       path: google.maps.SymbolPath.CIRCLE,  
       fillColor: '#91CF60',  
@@ -50,7 +51,7 @@ Note that plotGoogleMaps() defaults to using Google's pins as map icons.  To rep
     };  
   } 
   
->  function getCircleRed() {  
+  function getCircleRed() {  
     return {  
       path: google.maps.SymbolPath.CIRCLE,  
       fillColor: '#FC5050',  
@@ -60,6 +61,7 @@ Note that plotGoogleMaps() defaults to using Google's pins as map icons.  To rep
       strokeWeight: 1  
     };  
   }  
+```
 
 Manual editing was also peformed to remove a duplicate legend, as plotGoogleMaps() produces a legend for each dataset mapped, and the legends for child care facilities and Kindergartens were identical.
 
