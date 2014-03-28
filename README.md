@@ -2,6 +2,7 @@ SchoolVaccination
 =================
 
 Mapping school vaccination rates in Sacramento area.
+----------------------------------------------------
 
 This is a GIS visualization of immunization rates in Sacramento area child care facilities and schools, focusing particularly on children not immunized due to personal belief exemptions (PBEs).  This project covers only the six counties of the SACOG region--Sacramento, Yolo, Placer, El Dorado, Yuba, and Sutter.
 
