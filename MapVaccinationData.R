@@ -60,7 +60,7 @@ plotGoogleMaps(KVaccination, zcol="Pct Personal Belief Exemptions", previousMap=
 #bubbleGoogleMaps(ChildCareData_spdf, zcol="PBEPctCalc", mapTypeId="ROADMAP", colPalette=c("#91CF60","#F9F030","#FC5050"), layerName="Child Care Facilities")
 
 ##NOTE!!!! Manually edited code in HTML file at this point,
-##defining getCircle functions used below and removing extraneous legend.
+##defining getCircle functions (see Readme.MD) and removing extraneous legend.
 
 ##Change map markers
 SacVaccination <- readLines('KVaccination.htm')
