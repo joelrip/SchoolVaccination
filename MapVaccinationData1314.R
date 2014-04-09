@@ -17,6 +17,7 @@ KinderDataSub <- KinderDataSub[c(-37,-271),]
 Kcoord <- cbind(KinderDataSub$lon, KinderDataSub$lat)
 KinderData_spdf <- SpatialPointsDataFrame(Kcoord, KinderDataSub, proj4string=CRS("+proj=longlat"))
 KinderData_spdf <- spTransform(KinderData_spdf, CRS=CRS(proj4string(SACOGOutline)))
+writeOGR(KinderData_spdf, "Data", "KinderData1314", driver="ESRI Shapefile")
 
 ##Test plot points, color-coded
 #require(RColorBrewer)
